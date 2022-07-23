@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+}
+
+#submit-area {
+    /* display: block; */
+    box-shadow: 2px 2px 9px 3px #f5f5f5;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+#transation-area {
+    display: none;
+}
+
+.status {
+    color: white;
+    margin: 0px 20px;
+    border-radius: 15px;
+    padding: 20px;
+    /* margin: 0px 0px 20px 1px; */
+
+}
+
+.deposit {
+    background-color: steelblue;
+}
+
+.withdraw {
+    background-color: lightsalmon;
+}
+
+.balance {
+    background-color: orange;
+}
+
+.design-area {
+    box-shadow: 2px 2px 9px 3px #f5f5f5;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
