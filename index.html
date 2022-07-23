@@ -31,7 +31,7 @@
             <div class="col-md-4">
                 <div class="deposit status">
                     <h5>Deposit</h5>
-                    <h2>$00</h2>
+                    <h2>$ <span id="currentDeposit">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -51,8 +51,9 @@
             <div class="col-md-6">
                 <div class="design-area">
                     <h4>Deposit</h4>
-                    <input type="text" class="form-control" placeholder="$amount you went to deposit">
-                    <button class="btn btn-success mt-2">Deposit</button>
+                    <input type="text" id="depositAmount" class="form-control"
+                        placeholder="$amount you went to deposit">
+                    <button id="addDeposit" class="btn btn-success mt-2">Deposit</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -74,6 +75,20 @@
 
             const transationArea = document.getElementById('transation-area');
             transationArea.style.display = 'block';
+        })
+
+        // Deposit button event handler 
+        const depositBtn = document.getElementById('addDeposit');
+        depositBtn.addEventListener('click', function () {
+            const depositAmount = document.getElementById('depositAmount').value;
+            const depositNumber = parseFloat(depositAmount);
+
+            const currentDeposit = document.getElementById('currentDeposit').innerText;
+            const currentDepositNumber = parseFloat(currentDeposit);
+            const totalDeposit = depositNumber + currentDepositNumber;
+
+            document.getElementById("currentDeposit").innerText = totalDeposit;
+            document.getElementById("depositAmount").value = "";
         })
     </script>
 </body>
